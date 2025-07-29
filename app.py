@@ -67,7 +67,7 @@ st.write("### 🔎 Input Data")
 st.write(input_df)
 
 # Predict
-if st.button("Predict Salary Class"):
+if st.button("Predict Salary"):
     input_scaled = scaler.transform(input_df)
     prediction = model.predict(input_scaled)[0]
     salary_class = "More than 50K" if prediction == 1 else "Less than or equal to 50K"
@@ -75,7 +75,7 @@ if st.button("Predict Salary Class"):
 
 # Batch prediction
 st.markdown("---")
-st.markdown("#### 📂 Batch Prediction")
+st.markdown("#### 📂 Batch Salary Prediction")
 uploaded_file = st.file_uploader("Upload a CSV file for batch prediction", type="csv")
 
 if uploaded_file is not None:
@@ -89,13 +89,13 @@ if uploaded_file is not None:
         batch_data_scaled = scaler.transform(batch_data)
         batch_preds = model.predict(batch_data_scaled)
 
-        batch_data['PredictedClass'] = ["More than 50K" if pred == 1 else "Less than or equal to 50K" for pred in batch_preds]
+        batch_data['Predicted Salaries'] = ["More than 50K" if pred == 1 else "Less than or equal to 50K" for pred in batch_preds]
 
         st.write("✅ Predictions:")
         st.write(batch_data.head())
 
         csv = batch_data.to_csv(index=False).encode('utf-8')
-        st.download_button("Download Predictions CSV", csv, file_name='predicted_classes.csv', mime='text/csv')
+        st.download_button("Download Predictions CSV", csv, file_name='predicted_Salaries.csv', mime='text/csv')
 
     except Exception as e:
         st.error(f"❌ Error during batch prediction: {e}")
