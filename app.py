@@ -15,7 +15,7 @@ st.set_page_config(page_title="Employee Salary Prediction", page_icon="💼", la
 page_bg_img = '''
 <style>
     .stApp {
-        background-image: url("https://raw.githubusercontent.com/BKY1601/spamly/main/res/img/bg.png");
+        background-image: url("https://github.com/BKY1601/employee-salary-prediction/blob/main/src/img/bg.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
