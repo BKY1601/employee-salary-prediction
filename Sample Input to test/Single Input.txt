@@ -1,0 +1,20 @@
+More then 50K
+
+| Feature         | Value           |
+| --------------- | --------------- |
+| Age             | 45              |
+| Education Level | Masters         |
+| Job Role        | Exec-managerial |
+| Gender          | Male            |
+| Hours per week  | 60              |
+
+
+Less then 50K
+
+| Feature         | Value         |
+| --------------- | ------------- |
+| Age             | 25            |
+| Education Level | HS-grad       |
+| Job Role        | Other-service |
+| Gender          | Female        |
+| Hours per week  | 20            |
